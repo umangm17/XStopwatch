@@ -23,7 +23,7 @@ const Stopwatch = () => {
   };
 
   const myFun = () => {
-    if (timemillisec === 60) {
+    if (timemillisec === 59) {
       timemillisec = 0;
       timesecond++;
     }
