@@ -24,8 +24,8 @@ const Stopwatch = () => {
 
   const myFun = () => {
     if (timemillisec === 59) {
-      timemillisec = 0;
       timesecond++;
+      timemillisec = 0;
     }
     timemillisec++;
     return setTime({ sec: timesecond, milli: timemillisec });
@@ -34,9 +34,7 @@ const Stopwatch = () => {
   return (
     <div>
       <h1>Stopwatch</h1>
-      <div>
-        Time:{" " + time.sec + ":" + time.milli.toString().padStart(2, "0")}
-      </div>
+      <div>Time:{time.sec + ":" + time.milli.toString().padStart(2, "0")}</div>
       <div>
         <button onClick={isRunning ? stopTime : startTime}>
           {isRunning ? "Stop" : "Start"}
