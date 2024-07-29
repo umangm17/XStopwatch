@@ -8,7 +8,7 @@ const Stopwatch = () => {
   const [isRunning, setRunning] = useState(false);
   const startTime = (timesecond, timemillisec) => {
     myFun();
-    setStatus(setInterval(myFun, 10));
+    setStatus(setInterval(myFun, 1000));
     setRunning(true);
   };
   const stopTime = () => {
@@ -23,7 +23,7 @@ const Stopwatch = () => {
   };
 
   const myFun = () => {
-    if (timemillisec === 60) {
+    if (timemillisec === 59) {
       timemillisec = 0;
       timesecond++;
     }
