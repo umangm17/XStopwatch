@@ -30,17 +30,14 @@ const Stopwatch = () => {
     timemillisec++;
     return setTime({ sec: timesecond, milli: timemillisec });
   };
-  const formatTime = (seconds) => {
-    const minutes = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${minutes}:${secs.toString().padStart(2, "0")}`;
-  };
 
   return (
     <div>
       <h1>Stopwatch</h1>
-      <div>Time: {formatTime(time)}</div>
-      {/* Time:{" " + time.sec + ":" + time.milli.toString().padStart(2, "0")} */}
+      <div>
+        Time:{" " + time.sec + ":" + time.milli.toString().padStart(2, "0")}
+      </div>
+
       <div>
         <button onClick={isRunning ? stopTime : startTime}>
           {isRunning ? "Stop" : "Start"}
