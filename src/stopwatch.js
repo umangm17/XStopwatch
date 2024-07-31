@@ -24,8 +24,8 @@ const Stopwatch = () => {
 
   const myFun = () => {
     if (timemillisec === 59) {
-      timesecond++;
       timemillisec = 0;
+      timesecond++;
     }
     timemillisec++;
     return setTime({ sec: timesecond, milli: timemillisec });
